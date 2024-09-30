@@ -1,1 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root{
+    --mainColor:#e8e8ee;
+    --headColor:#233b6e;
+    --primaryColor1:#d3d6db;
+    --secondaryColor1:#415f9d;
+    --primaryColor2:#f379b1;
+    --secondaryColor2:#c3195d;
+  }
+
+  body {
+    font-family: "Nunito", sans-serif;
+    background-color: var(--mainColor);
+    color: var(--headColor);
+    line-height: 1.6;
+    padding: 20px;
+  }
+  
+/* ----------------------------------------------------------------------- */
+
+  /* Header */
+  header {
+    background-color: var(--mainColor);
+    color: var(--headColor);
+    text-align: center;
+    padding: 20px 0;
+   
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    color: var(--headColor);
+  }
+  
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-style: italic;
+    color:var(--secondaryColor);
+    
+  }
+  
+/* ----------------------------------------------------------------------- */
+
+  /* Buttons */
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9; 
+    margin-bottom: 20px; 
+   }
+
+  
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .but-1 {
+    background-color: var(--primaryColor1);
+    color: var(--secondaryColor2);
+    font-weight:300;
+    border: solid;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .but-2{
+    background-color: var(--primaryColor1);
+    color: var(--secondaryColor);
+    font-weight:300;
+    border: solid;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .but-1:hover, .but-2:hover {
+    background-color: var(--linearGradient);
+  }
+
+  /* Hero Section  */
+
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; 
+  margin-bottom: 20px; 
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+.charts {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+canvas {
+  width: 400px !important;
+  height: 300px !important; 
+  margin: 20px; 
+}
+
+
+/* ----------------------------------------------------------------------- */
+  /* Section Styling */
+  section {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #d81b60;
+  }
+
+/* ----------------------------------------------------------------------- */
+
+ /* Income Section */
+
+ .inc h1{
+    text-align: center;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+ .inc p {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--secondaryColor2);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+ 
+  form {
+    width: 90%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 2px solid #d81b60; 
+    border-radius: 10px; 
+    background-color: linear-gradient(45deg, pink, purple); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #d81b60;
+  }
+
+  /* Styling for input fields and select dropdown */
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Styling the Submit button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #d81b60;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+  background: linear-gradient(45deg, #f06292, #ba68c8);
+}
+
+/* Expense Section */
+.exp h2 {
+  text-align: center;
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.expense-summary {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--secondaryColor1); /* Color for total expense */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.expense-form {
+  width: 80%; 
+  max-width: 400px; 
+  margin: 0 auto; 
+  padding: 20px;
+  border: 2px solid var(--secondaryColor1); /* Border with color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #f9f9f9; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Styling each form group in Expense Form */
+.expense-form-group {
+  margin-bottom: 15px;
+}
+
+/* Styling for labels in Expense Form */
+.expense-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--secondaryColor1); /* Label color */
+}
+
+/* Styling for input fields and select dropdown in Expense Form */
+.expense-input,
+.expense-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* Styling the Submit button for Expense Form */
+.exp .expense-button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--secondaryColor1); 
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit button hover effect for Expense Form */
+.exp .expense-button:hover {
+  background: linear-gradient(45deg,#d3d6db,#415f9d ); 
+}
+
+/* Summary Section */
+
+.sum {
+  width: 80%; 
+  max-width: 600px; 
+  margin: 20px auto; 
+  padding: 20px;
+  border: 2px solid #d81b60; 
+  border-radius: 10px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.sum h2 {
+  text-align: center; 
+  font-size: 2em;
+  color: #333; 
+  margin-bottom: 15px; 
+}
+
+.net-income {
+  text-align: center; 
+  font-size: 1.5em; 
+  color: #d81b60; 
+  font-weight: bold; 
+  margin-bottom: 20px; 
+}
+
+/* Transaction List Styles */
+
+.transaction-list {
+  list-style-type: none; 
+  padding: 0; 
+  margin:0;
+  width:100%;
+}
+
+.transaction-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-list li:last-child {
+  border-bottom: none; 
+}
+
+.transaction-list li:hover {
+  background-color: #f1f1f1; /* Slight highlight effect on hover */
+}
 
