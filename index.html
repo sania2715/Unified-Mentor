@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/b657d64020.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Header Section -->
+    <header>
+      <nav id="nav">
+        <h1>EXPENSE TRACKER</h1>
+        <p>
+          Managing money isn't about being rich or poor; it's about making every
+          penny count. It's not about what you have, but how you handle it.
+        </p>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="buttons">
+      <!-- Charts -->
+      <div class="charts">
+        <canvas id="incomeChart"></canvas>
+        <canvas id="expenseChart"></canvas>
+      </div>
+      
+      <!-- Button -->
+      <div class="button-group">
+        <button id="income-button" class="but-1">
+          Add income  <i class="fa-solid fa-plus"></i>
+        </button>
+    
+        <button id="expense-button" class="but-2">
+          Add expense <i class="fa-solid fa-plus"></i>
+        </button>
+      </div>
+    </div>
+    
+    
+<!-- -------------------------------------------------------------------- -->
+
+   
+<!-- Income Section -->
+<section id="income" class="inc">
+  <h1>Income</h1>
+  <p>Total Income: <span id="total-income">0</span></p>
+
+  <form id="income-form">
+    <div class="form-group">
+      <label for="income-date">Date:</label>
+      <input type="date" id="income-date" name="income-date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="income-description">Description:</label>
+      <input type="text" id="income-description" name="income-description" placeholder="Enter income source" required>
+    </div>
+
+    <div class="form-group">
+      <label for="income-category">Category:</label>
+      <select id="income-category" name="income-category" required>
+        <option value="" disabled selected>Select category</option>
+        <option value="Salary">Salary</option>
+        <option value="Business">Business</option>
+        <option value="Investments">Investments</option>
+        <option value="Freelance">Freelance</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="income-amount">Amount:</label>
+      <input type="number" id="income-amount" name="income-amount" placeholder="Enter amount" required>
+    </div>
+
+    <button type="submit">Add Income</button>
+
+  </form>
+</section>
+
+<!-- -------------------------------------------------------------------- -->
+
+ <!-- Expense Section -->
+<section id="expense" class="exp">
+  <h2>Expense</h2>
+  <p class="expense-summary">Total Expense: <span id="total-expense">0</span></p>
+
+  <form id="expense-form" class="expense-form">
+    <div class="expense-form-group">
+      <label for="expense-date" class="expense-label">Date:</label>
+      <input type="date" id="expense-date" name="expense-date" class="expense-input" required>
+    </div>
+
+    <div class="expense-form-group">
+      <label for="expense-description" class="expense-label">Description:</label>
+      <input type="text" id="expense-description" name="expense-description" placeholder="Enter description" class="expense-input" required>
+    </div>
+
+    <div class="expense-form-group">
+      <label for="expense-category" class="expense-label">Category:</label>
+      <select id="expense-category" name="expense-category" class="expense-select" required>
+        <option value="" disabled selected>Select category</option>
+        <option value="Food">Food</option>
+        <option value="Transportation">Transportation</option>
+        <option value="Entertainment">Entertainment</option>
+        <option value="Shopping">Shopping</option>
+        <option value="Utilities">Utilities</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div class="expense-form-group">
+      <label for="expense-amount" class="expense-label">Amount:</label>
+      <input type="number" id="expense-amount" name="expense-amount" placeholder="Enter amount" class="expense-input" required>
+    </div>
+
+    <button type="submit" class="expense-button">Add Expense</button>
+  </form>
+</section>
+
+<!-- -------------------------------------------------------------------- -->
+
+   <!-- Summary Section -->
+<section id="summary" class="sum">
+  <h2>Summary</h2>
+  <p class="net-income">Net Income: <span id="net-income">0</span></p>
+  
+  <ul id="transaction-list" class="transaction-list">
+    <!-- Transactions will be dynamically added here -->
+  </ul>
+</section>
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
